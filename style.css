@@ -113,6 +113,7 @@ button {
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+    place-items: center;
 }
 
 .main-content .card {
@@ -123,19 +124,35 @@ button {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
     display: grid;
-    grid-template-rows: 1fr repeat(3, 10fr);
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    /* justify-self: stretch; */
+    align-self: center;
+    /* gap: 15px; */
+    /* grid-row-gap: 15px; */
 }
 
 .article .title {
     grid-column: 1 / 3;
+    /* grid-row: 1 / 2; */
+    /* margin: 0px; */
+    /* margin-top: 15px; */
+    align-self: end;
+}
+
+.article .card {
+    margin: 15px 15px 15px 0;
+}
+
+.article > .card {
+    margin: 0 15px 15px 0;
 }
 
 .announcements {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     display: grid;
+    /* align-self: start; */
     /* grid-template-rows: repeat(3, 1fr); */
 }
 
@@ -153,4 +170,15 @@ button {
 .trending {
     grid-column: 2 / 3;
     display: grid;
+    justify-self: stretch;
+}
+
+/* Utils */
+.icon{
+    width:24px;
+    height:24px;
+}
+
+.white {
+    fill: white;
 }
